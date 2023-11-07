@@ -8,5 +8,101 @@
 
 #game {
     display:grid;
-    grid-template-columns: repeat(1fr, 3);
+    padding-left:100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:50%;
+    margin:0 auto;
+}
+
+.tiles {
+    z-index:2;
+    width: 200px;
+    height:200px;
+    background-color:blue;
+    margin-bottom: 50px;
+
+}
+
+#tiles1 {
+    grid-row:1;
+    grid-column-start: 1;
+    grid-row-start:1;
+}
+
+#tiles2 {
+    grid-column-start: 2;
+    grid-row-start:1;
+}
+
+#tiles3 {
+    grid-column-start: 3;
+    grid-row-start:1;
+}
+
+#tiles4 {
+    grid-column-start: 4;
+    grid-row-start:2;
+}
+
+#tiles5 {
+    grid-column-start: 5;
+    grid-row-start:2;
+}
+
+#tiles6 {
+    grid-column-start: 6;
+    grid-row-start:2;
+}
+
+.otherTiles {
+    width: 200px;
+    height:200px;
+    margin-bottom: 50px;
+    border:1px solid black;
+}
+
+#otherTiles1 {
+    grid-column-start: 1;
+    grid-row-start:1;
+}
+
+#otherTiles2 {
+    grid-column-start: 2;
+    grid-row-start:1;
+}
+
+#otherTiles3 {
+    grid-column-start: 3;
+    grid-row-start:1;
+}
+
+#otherTiles4 {
+    grid-column-start: 4;
+    grid-row-start:2;
+}
+
+#otherTiles5 {
+    grid-column-start: 5;
+    grid-row-start:2;
+}
+
+#otherTiles6 {
+    grid-column-start: 6;
+    grid-row-start:2;
+}
+
+#scoreHeader {
+    text-align:center;
+    font-size:2em;
+    font-weight:bold;
+    width:30%;
+    margin:0 auto;
+    border:10px solid black;
+}
+
+input {
+    display:block;
+    width:100px;
+    height:50px;
+    margin:10px auto;
 }
