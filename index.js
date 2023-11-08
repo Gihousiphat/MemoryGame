@@ -49,11 +49,9 @@ function flipCoverTile(tile) {
             if(completeArr.length == 6) {
                 score++;
                 document.getElementById('score').innerHTML = score;
-                for(let i = 1; i < 7; i++) {
-                    document.getElementById(`tiles${i}`).style.zIndex = 2;
-                }
                 count = 0;
                 completeArr = [];
+                setTimeout(completeReset, 100);
                 return setTimeout(completeAlert, 50);
             }
             return count = 0;
@@ -69,6 +67,12 @@ function flipCoverTile(tile) {
 function completeAlert() {
     alert('Congratulations!');
 };
+
+function completeReset() {
+    for(let i = 1; i < 7; i++) {
+        document.getElementById(`tiles${i}`).style.zIndex = 2;
+    }
+}
 
 coverTileOne.addEventListener('click', flipCoverTile);
 coverTileTwo.addEventListener('click', flipCoverTile);
