@@ -1,4 +1,5 @@
 let count = 0;
+let score = 0;
 let imageArr = ['Happy.png', 'Happy.png', 'Frog.jpg', 'Frog.jpg', 'Cat.png', 'Cat.png'];
 let compareArr = [];
 let completeArr = [];
@@ -44,9 +45,15 @@ function flipCoverTile(tile) {
                 }
             }
             completeArr.push(...compareArr);
-            console.log(completeArr);
             compareArr = [];
             if(completeArr.length == 6) {
+                score++;
+                document.getElementById('score').innerHTML = score;
+                for(let i = 1; i < 7; i++) {
+                    document.getElementById(`tiles${i}`).style.zIndex = 2;
+                }
+                count = 0;
+                completeArr = [];
                 return setTimeout(completeAlert, 50);
             }
             return count = 0;
@@ -79,3 +86,7 @@ function unflipCoverTile() {
     return document.getElementById('modal').style.display = 'none';
 }
 
+function resetScore() {
+    document.getElementById('score').innerHTML = 0;
+    score = 0;
+}
