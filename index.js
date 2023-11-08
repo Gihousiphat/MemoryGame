@@ -51,8 +51,9 @@ function flipCoverTile(tile) {
                 document.getElementById('score').innerHTML = score;
                 count = 0;
                 completeArr = [];
+                imageArr.sort(() => Math.random() - 0.5);
                 setTimeout(completeReset, 100);
-                return setTimeout(completeAlert, 50);
+                setTimeout(completeAlert, 50);
             }
             return count = 0;
         } else {
@@ -72,6 +73,7 @@ function completeReset() {
     for(let i = 1; i < 7; i++) {
         document.getElementById(`tiles${i}`).style.zIndex = 2;
     }
+    setImages();
 }
 
 coverTileOne.addEventListener('click', flipCoverTile);
