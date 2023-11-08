@@ -88,5 +88,5 @@ function unflipCoverTile() {
 
 function resetScore() {
     document.getElementById('score').innerHTML = 0;
-    score = 0;
+    return score = 0;
 }
